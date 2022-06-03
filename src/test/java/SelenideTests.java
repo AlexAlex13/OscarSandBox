@@ -20,7 +20,7 @@ public class SelenideTests {
     }
 
     @Test
-    public void changelangTest(){
+    public void changelangTest() throws InterruptedException {
         SelenideElement lang_selector = $("[name='language']");
         SelenideElement goButton = $("button.btn-default");
         SelenideElement viewbasket = $(".btn-group a.btn.btn-default");
@@ -29,5 +29,7 @@ public class SelenideTests {
         goButton.click();
         viewbasket.shouldHave(Condition.text("посмотреть корзину"));
         Thread.sleep(2000);
+
+
     }
 }
